@@ -37,7 +37,7 @@
 
 ## 举报
 
-如果发生违反本准则的行为，请联系维护团队：<conduct@kasane-project.example.invalid>。所有投诉都会被及时且公平地审查和调查。
+如果发生违反本准则的行为，请通过 [GitHub 仓库所有者主页](https://github.com/hositsuki) 私下联系维护者。请勿在公开 Issue 中披露投诉者身份或其他敏感个人信息。所有投诉都会被及时且公平地审查和调查。
 
 ## 归属
 

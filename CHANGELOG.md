@@ -41,5 +41,5 @@
 - macOS 物理机验证：**未完成**；发布构件未签名 / 未公证。
 - `src-tauri/icons/` 暂为占位；维护者需在 release 前填入真实图标。
 
-[Unreleased]: https://github.com/kasane-project/kasane-desktop/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/kasane-project/kasane-desktop/releases/tag/v0.1.0
+[Unreleased]: https://github.com/hositsuki/kasane-desktop/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/hositsuki/kasane-desktop/releases/tag/v0.1.0
