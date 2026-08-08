@@ -1,0 +1,101 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-tauri:
+    name: build (${{ matrix.platform }})
+    needs: frontend-checks
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macos-latest
+            args: --target universal-apple-darwin
+          - platform: windows-latest
+            args: ''
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.14.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: pnpm
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust target
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: ./src-tauri -> target
+
+      - name: Install frontend dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify required Tauri icons
+        shell: bash
+        run: |
+          set -euo pipefail
+          for icon in 32x32.png 128x128.png 128x128@2x.png icon.ico icon.icns; do
+            if [ ! -f "src-tauri/icons/$icon" ]; then
+              echo "::error::src-tauri/icons/$icon is missing. Maintainers must add real icons before tagging a release."
+              exit 1
+            fi
+          done
+
+      - name: Build Tauri bundle (unsigned)
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tagName: ${{ github.ref_name }}
+          releaseName: 'KASANE ${{ github.ref_name }}'
+          releaseBody: |
+            KASANE ${{ github.ref_name }}
+
+            These artifacts are **unsigned** and produced by CI.
+            - macOS: not notarized. First launch will require right-click → Open or `xattr -dr com.apple.quarantine`.
+            - Windows: not signed with a code-signing certificate. SmartScreen will warn.
+            See `README.md` → "Feature status" for the honest list of implemented vs experimental features.
+          releaseDraft: true
+          prerelease: false
+          args: ${{ matrix.args }}
+
+  frontend-checks:
+    name: frontend-checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.14.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm lint
+      - run: pnpm build

@@ -1,0 +1,151 @@
+Mozilla Public License Version 2.0
+====================================
+
+Copyright (c) 2026 KASANE Contributors
+
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+The full license text is reproduced below.
+
+Mozilla Public License, v. 2.0
+
+1. Definitions
+
+   1.1. "Contributor" means each individual or legal entity that creates,
+   contributes to the development of, or otherwise makes available the
+   Source Code of the Licensed Product.
+
+   1.2. "Contributor Version" means any combination of the Source Code
+   of the Licensed Product and the Modifications made by that Contributor.
+
+   1.3. "Distribution" means any conveyance of the Licensed Product to a
+   third party.
+
+   1.4. "Larger Work" means a work that combines the Licensed Product
+   with other software in a separate file or files.
+
+   1.5. "License" means this document.
+
+   1.6. "Licensed Product" means the Source Code and Executable form of
+   the work of authorship to which the License applies.
+
+   1.7. "Modifications" means any addition to or deletion from the
+   substance or structure of (i) the Source Code or (ii) any previous
+   Modifications. When the Licensed Product is conveyed in Executable
+   form, the term "Modifications" includes any change to the Licensed
+   Product.
+
+   1.8. "Patent Claims" of a Contributor means any patent claim(s),
+   including without limitation, method, process, and apparatus claims,
+   in any patent licensable by such Contributor that would be infringed,
+   but for the grant of the License, by the making, using, selling,
+   offering for sale, or importing of the Licensed Product.
+
+   1.9. "Source Code" means the preferred form of the Licensed Product
+   for making modifications to it, including all modules contained
+   therein, plus any associated interface definition files, scripts
+   used to control compilation and installation, or a list of source
+   code differences.
+
+   1.10. "You" (or "Your") means an individual or a legal entity
+   exercising rights under this License.
+
+2. License Grants and Conditions
+
+   2.1. Grants. Each Contributor hereby grants You a world-wide,
+   royalty-free, non-exclusive license:
+
+      (a) under intellectual property rights to use, reproduce, make
+      available, modify, display, perform, distribute, and otherwise
+      exploit its Contributions; and
+
+      (b) under Patent Claims of such Contributor to make, use, sell,
+      offer for sale, and otherwise dispose of its Contributions; and
+
+      (c) to allow any other recipient of the Licensed Product to
+      receive the Licenses granted to that recipient under (a) and (b).
+
+   2.2. Effective Date. The licenses granted in Section 2.1 are
+   effective on the date Contributor first distributes such
+   Contribution.
+
+   2.3. Limitations on Grant Scope. The licenses granted are the only
+   rights granted under this License. No additional rights are granted
+   by implication, estoppel, or otherwise.
+
+   2.4. Subsequent Licenses. No Contributor makes additional grants as
+   a result of Your choice to distribute the Licensed Product under a
+   subsequent version of this License.
+
+   2.5. Multiple Licensed Products. A Contributor may provide the
+   Licensed Product in more than one version, but at least one version
+   must be governed by this License.
+
+   2.6. Larger Works. Combining the Licensed Product with other
+   software in a separate file or files does not by itself cause the
+   combination to be a Modification. The Licensed Product remains
+   subject to this License.
+
+   2.7. Distribution. The Licensed Product is distributable under the
+   terms of this License. Any Modifications, in source or executable
+   form, that You distribute must be made available in Source Code form
+   under the terms of this License.
+
+   2.8. Required Notices. You must include a copy of this License and
+   any third-party notices with the Licensed Product.
+
+   2.9. Modifications Available to the Public. If You Modifications to
+   the Licensed Product, You must make the Source Code of the
+   Modifications available to recipients of the Executable form under
+   the terms of this License.
+
+   2.10. Non-Source Form Distribution. If You distribute the Licensed
+   Product in non-source form, You must make the Source Code available
+   to recipients under the terms of this License.
+
+3. Responsibilities
+
+   3.1. If You assert a patent infringement claim against a Contributor
+   alleging that the Licensed Product constitutes direct or
+   contributory patent infringement, the licenses granted to You by
+   that Contributor terminate.
+
+4. Inability to Comply
+
+   If it is impossible for You to comply with the terms of this License
+   (for example, because of a court order), You must: (a) comply with
+   the terms of this License to the maximum extent possible; and (b)
+   describe the limitations and the code they affect.
+
+5. Termination
+
+   The rights granted under this License will terminate automatically
+   if You fail to comply with any of its terms. Upon termination, You
+   must stop using and distributing the Licensed Product.
+
+6. Disclaimer of Warranty
+
+   The Licensed Product is provided "AS IS" without warranty of any
+   kind, express or implied. See the License for the specific
+   language governing permissions and limitations under the License.
+
+7. Limitation of Liability
+
+   In no event shall any Contributor be liable to You for any damages,
+   including any lost profits, lost savings, or other incidental or
+   consequential damages, arising out of the use or inability to use
+   the Licensed Product.
+
+8. Litigation
+
+   Any litigation relating to this License may be brought only in the
+   courts of a jurisdiction where the defendant maintains its principal
+   place of business. The parties consent to personal jurisdiction in
+   those courts.
+
+------------------------------------------------------------------------
+
+For the full and authoritative version of this license, see
+https://www.mozilla.org/MPL/2.0/.

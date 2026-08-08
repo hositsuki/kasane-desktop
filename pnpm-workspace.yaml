@@ -1,0 +1,18 @@
+packages:
+  - '.'
+
+# Approve native-binary install scripts so pnpm can download
+# the esbuild and @swc/core platform binaries during install.
+#
+# In pnpm 10/11 this is recorded as the `allowBuilds` map (the
+# schema `pnpm approve-builds --all` writes).
+# In pnpm 9 the same data lives in the `onlyBuiltDependencies`
+# array. Listing both keeps the lockfile-compatible install
+# non-interactive on the bundled pnpm 11 runtime **and** on the
+# pnpm 9.14.0 used by the GitHub Actions CI.
+allowBuilds:
+  esbuild: true
+  '@swc/core': true
+onlyBuiltDependencies:
+  - esbuild
+  - '@swc/core'
